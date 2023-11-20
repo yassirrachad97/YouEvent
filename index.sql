@@ -148,4 +148,10 @@ WHERE id_part = 33;
 UPDATE participer SET price = 370.5 
 WHERE categorie = 'vip';
 DELETE FROM participants WHERE id =14;
+SELECT firstname FROM participants  WHERE id=8;
+SELECT firstname
+ FROM participants
+  WHERE firstname LIKE 'a%';
+  SELECT firstname, categorie FROM participants ps INNER JOIN participer p on ps.id=p.id_part where p.categorie = "vip";
 
+select ps.firstname from participants ps inner join participer p on ps.id=p.id_part inner join event e on p.id_event=e.id where e.title='festivale de culture amazighe'
